@@ -1,0 +1,5 @@
+# Bazel folders
+bazel-*
+
+# Compilation database
+compile_commands.json

@@ -1,0 +1,20 @@
+--- BUILD
++++ BUILD
+@@ -0,0 +1,5 @@
++filegroup(
++    name = "all",
++    srcs = glob(["**"]),
++    visibility = ["//visibility:public"],
++)
+
+--- generate.py
++++ generate.py
+@@ -95,8 +95,7 @@
+     build_args = [
+-        '--override_repository=bazel_compdb={}'.format(aspects_dir),
+         '--aspects=@bazel_compdb//:aspects.bzl%compilation_database_aspect',
+         '--noshow_progress',
+         '--noshow_loading_progress',
+         '--output_groups={}'.format(_OUTPUT_GROUPS),
+         '--target_pattern_file={}'.format(targets_file.name),
+     ]
