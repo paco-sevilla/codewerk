@@ -8,3 +8,9 @@ cc_test(
         "@catch2",
     ],
 )
+
+py_test(
+    name = "test_pybind",
+    srcs = ["test_pybind.py"],
+    data = ["//hello:hello_pybind.so"],  # TODO: this should be a dependecy to a target (not data, not .so)
+)
