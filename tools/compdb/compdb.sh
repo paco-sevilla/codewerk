@@ -1,3 +1,5 @@
+# Copyright
+
 echo "Generating compilation database"
 
 # Get current working directory

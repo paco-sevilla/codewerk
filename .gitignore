@@ -3,3 +3,7 @@ bazel-*
 
 # Compilation database
 compile_commands.json
+
+# Python created folders
+__pycache__
+*.egg-info
