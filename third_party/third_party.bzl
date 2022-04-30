@@ -38,4 +38,11 @@ def third_party():
         build_file = "@pybind11_bazel//:pybind11.BUILD",
         strip_prefix = "pybind11-2.9.1",
         urls = ["https://github.com/pybind/pybind11/archive/refs/tags/v2.9.1.tar.gz"],
-    ) 
+    )
+
+    http_archive(
+        name = "rules_sphinx",
+        strip_prefix = "rules_sphinx-0.1.0",
+        sha256 = "e60b758991ec51b4502700bd246c47601227486a428307bf6f2e0cfaf266b175",
+        url = "https://github.com/agoessling/rules_sphinx/archive/v0.1.0.tar.gz",
+    )
