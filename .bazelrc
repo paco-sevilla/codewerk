@@ -1,1 +1,10 @@
-build --copt="-std=c++14"
+# Build optimized code by default
+build --compilation_mode=opt
+
+# Use platforms for C++ toolchain resolution
+build --incompatible_enable_cc_toolchain_resolution
+build --platforms=//bazel/platforms:default
+
+# Build with clang
+build:clang_14 --experimental_add_exec_constraints_to_targets="//...=//bazel/platforms/cc_compiler:clang_14"
+build:clang --config=clang_14
