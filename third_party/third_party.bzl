@@ -38,4 +38,18 @@ def third_party():
         build_file = "@pybind11_bazel//:pybind11.BUILD",
         strip_prefix = "pybind11-2.9.1",
         urls = ["https://github.com/pybind/pybind11/archive/refs/tags/v2.9.1.tar.gz"],
+    )
+
+    http_archive(
+        name = "gcc_10",
+        sha256 = "ab59d4687abcb6e3199646f5d391c931bd67965ff01812ead70c8c6ba1a4156d",
+        build_file = "//third_party/gcc_10:gcc_10.BUILD",
+        urls = ["https://codewerk.jfrog.io/artifactory/default-generic-local/third_party/gcc_10.tar.gz"],
+    ) 
+
+    http_archive(
+        name = "gcc_4",
+        sha256 = "1577d61dca561f3f68aa94b82567142d6cb3e6e91b15d23f0dc50f0181f10d1d",
+        build_file = "//third_party/gcc_4:gcc_4.BUILD",
+        urls = ["https://codewerk.jfrog.io/artifactory/default-generic-local/third_party/gcc_4.tar.gz"],
     ) 

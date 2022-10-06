@@ -8,8 +8,12 @@ load("@pybind11_bazel//:python_configure.bzl", "python_configure")
 python_configure(name = "local_config_python")
 
 register_execution_platforms(
-    "//bazel/platforms:linux-x86_64-gcc_11",
+    "//bazel/platforms:linux-x86_64-gcc_10",
+    "//bazel/platforms:linux-x86_64-gcc_4",
     "//bazel/platforms:linux-x86_64-clang_14",
 )
 
-register_toolchains("//bazel/toolchains:toolchain")
+register_toolchains(
+    "@gcc_10//:toolchain",
+    "@gcc_4//:toolchain",
+)

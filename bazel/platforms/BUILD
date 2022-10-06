@@ -1,6 +1,6 @@
 alias(
     name = "default",
-    actual = ":linux-x86_64-gcc_11",
+    actual = ":linux-x86_64-gcc_10",
 )
 
 platform(
@@ -13,11 +13,11 @@ platform(
 )
 
 platform(
-    name = "linux-x86_64-gcc_11",
+    name = "linux-x86_64-gcc_10",
     constraint_values = [
         "//bazel/platforms/os:linux",
         "//bazel/platforms/cpu:x86_64",
-        "//bazel/platforms/cc_compiler:gcc_11",
+        "//bazel/platforms/cc_compiler:gcc_10",
     ],
 )
 

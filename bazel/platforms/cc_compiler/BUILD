@@ -2,7 +2,7 @@ package(default_visibility = ["//visibility:public"])
 
 constraint_setting(
     name = "cc_compiler",
-    default_constraint_value = ":gcc_11"
+    default_constraint_value = ":gcc_10"
 )
 
 constraint_value(
@@ -11,7 +11,7 @@ constraint_value(
 )
 
 constraint_value(
-    name = "gcc_11",
+    name = "gcc_10",
     constraint_setting = ":cc_compiler",
 )
 

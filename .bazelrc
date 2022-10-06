@@ -5,6 +5,13 @@ build --compilation_mode=opt
 build --incompatible_enable_cc_toolchain_resolution
 build --platforms=//bazel/platforms:default
 
+# Build with gcc_10
+build:gcc_10 --experimental_add_exec_constraints_to_targets="//...=//bazel/platforms/cc_compiler:gcc_10"
+build:gcc --config=gcc_10
+
+# Build with gcc_4
+build:gcc_4 --experimental_add_exec_constraints_to_targets="//...=//bazel/platforms/cc_compiler:gcc_4"
+
 # Build with clang
 build:clang_14 --experimental_add_exec_constraints_to_targets="//...=//bazel/platforms/cc_compiler:clang_14"
 build:clang --config=clang_14
